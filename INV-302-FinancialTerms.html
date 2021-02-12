@@ -302,12 +302,12 @@
 										<img v-bind:src="post.Figure" class="img-fluid">											
 										<dl>
 											<dd>作者：{{post.Author}}</dd>
-											<dd>書名：{{post.Title}} </dd>
+											<dd>書名：{{post.TitleC}} </dd>
 											<dd>出版商：{{post.Publisher}}</dd>
 											<dd>年份：{{post.Year}}</dd>
 											<dd>價格：{{post.Price}} </dd>
 											<dd>
-												英文本下載：<a v-bind:href="post.Book">
+												原文版：<a v-bind:href="post.Book">
 													{{ post.TitleE }}
 												</a>											
 											</dd>
