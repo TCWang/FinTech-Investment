@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/SST-01-Template02.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CSS 的 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Fontawesom 的 CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- Google Icons CDN  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- My CSS file -->
+  <link rel="stylesheet" href="css/mycss.css">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>智慧理財 - 理財知識</title>
+  <meta name="description" content="Smart Investment Website">
+  <!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+  <!-- Vue實例的掛載點 -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">
+		智慧理財
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-hand-holding-usd">投資標的</i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-100-ETFSummary.html">投資標的匯總</a>
+              <a class="dropdown-item" href="INV-101-MarketTrend.html">市場分析</a>
+              <a class="dropdown-item" href="INV-102-InvestmentIndex.html">投資指標</a>						
+              <a class="dropdown-item" href="INV-103-InvestmentSuggestion.html">投資建議</a>
+		
+            </div>
+          </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-money-check-alt"></i>投資監控
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-200-StatusSummary.html">投資管控匯總</a>
+              <a class="dropdown-item" href="INV-201-Status1.html">網路作業說明</a>
+              <a class="dropdown-item" href="INV-202-Status2.html">股市即時監控</a>
+            </div>
+          </li>			
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-money-bill-alt"></i>財經資訊
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-300-FinancialWebsite.html">理財資訊網</a>
+              <a class="dropdown-item" href="INV-301-FinancialNews.html">財經資訊</a>
+              <a class="dropdown-item" href="INV-302-FinancialTerms.html">理財知識</a>
+            </div>
+          </li>	
+
+        </ul>
+
+      </div>
+    </nav>
+
+
+    <!-- Jumbotron-->
+
+    <!-- InstanceBeginEditable name="jumbotron description " -->
+	<div class="jumbotron jumbotron-fluid jumbotron-bg3 d-flex align-items-end">
+        <div class="container">
+            <div class="bg-lighter p-1" style="width:300px">
+              <h4 class="text-white" >理財知識</h4>
+              <p class="lead text-white">理財入門教學</p>
+            </div>
+		</div>
+    </div>
+    <!-- InstanceEndEditable --> 
+
+    <!-- InstanceBeginEditable name="main_editable" -->
+	<article>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="list-group" id="MenuList" role="tablist">
+              <a href="#Menu-B1" class="list-group-item list-group-item-action active" data-toggle="list">ETF</a>
+              <a href="#Menu-B2" class="list-group-item list-group-item-action" data-toggle="list">ESG</a>
+              <a href="#Menu-B3" class="list-group-item list-group-item-action" data-toggle="list">理財書籍</a>
+              <a href="#Menu-B4" class="list-group-item list-group-item-action" data-toggle="list">股市名詞</a>				
+            </div>
+            <br>
+          </div>
+          <div class="col-md-10">
+            <div class="tab-content">
+
+              <div class="tab-pane active" id="Menu-B1" role="tabpanel">
+              <!-- Menu B1 -->
+				<div class="row">
+				  	<div class="col-md-12 col-lg-6">
+						<h5>Exchange-Traded Fund, ETF 股票型指數基金</h5>
+						ETF是被動追蹤某一指數表現的共同基金，其投資組合儘可能的完全比照指數的成分股組成，並且在集中市場掛牌，如同一般股票交易買賣。<br><br>
+						<mark>ETF 與基金Fund不同</mark>的是，它不用像基金一樣需要跟銀行申購和贖回，而是可以直接在股票交易所買賣。因此買賣非常方便，手續費與管理費也比一般基金低很多。		
+						<h5>ETF 投資理財資訊</h5>
+						<ul>
+							<li>
+								<a href="https://www.storm.mg/lifestyle/3061339?mode=whole">風傳媒 2020/09/26</a> ETF怎麼挑、怎麼買？搞懂4個高報酬率買賣策略，不懂股票也不怕！
+							</li>
+							<li>
+								<a href="https://rich01.com/etf0050/">Mr.Market市場先生 2017/11/16: </a>ETF 是什麼? 如何投資 ETF 才能有6%報酬率?
+							</li>
+							<li>
+								<a href="https://rich01.com/return-of-investment/">Mr.Market市場先生 2018/05/01</a>什麼是投資報酬率》「年化報酬率」和「殖利率」有什麼不同？
+							</li>
+							<li>
+								<a href="https://www.moneydj.com/etf/x/Tool/Tool0001.xdjhtm">理財網 </a> 定期定額報酬率試算
+							</li>
+						</ul>
+
+						
+				  	</div>
+				  	<div class="col-md-12 col-lg-6">
+						<h5>台灣ETF報酬率有多少</h5>
+						依據 2007/08 - 2017/08 Mr.Market 市場先生資料
+						<table class="table table-sm">
+							<tr>
+								<th>ETF類別</th>
+								<th>10年總報酬</th>
+								<th>年化報酬率</th>
+							</tr>
+							<tr>
+								<td>台灣50</td>
+								<td> 79.0%</td>
+								<td>6.0%</td>
+							</tr>
+							<tr>
+								<td>SP500</td>
+								<td>108.3%</td>
+								<td>7.6%</td>
+							</tr>							
+						</table>
+						
+						<h5>小資族如何投資ETF - 定期定額</h5>
+						如果小資族每月從薪水撥出一些錢，定期定額投入報酬率6%的標的，最後可以拿回多少呢？ <br><br>
+						假設報酬率是 6%
+						<table class="table table-striped table-sm">
+							<tr>
+								<th>期間</th>
+								<th>$10,000/月 / 總投資</th>
+								<th>$15,000/月 / 總投資</th>
+								<th>$20,000/月 / 總投資</th>
+							</tr>
+							<tr>
+								<td>20年</td>
+								<td>$4,441,271 / $2,400,000</td>
+								<td>$6,621,406 / $3,600,000</td>
+								<td>$8,828,542 / $4,800,000</td>
+							</tr>
+							<tr>
+								<td>30年</td>
+								<td>$9,486,982 / $3,600,000</td>
+								<td>$14,230,474 / $5,400,000</td>
+								<td>$18,973,965 / $7,200,000</td>
+							</tr>							
+							<tr>
+								<td>40年</td>
+								<td>$18,571,463 / $4,800,000</td>
+								<td>$27,857,154 / $7,200,000</td>
+								<td>$37,142,872 / $9,600,000</td>
+							</tr>							
+						</table>
+					
+				  	</div>					
+				  
+				</div>
+              </div>
+
+              <div class="tab-pane" id="Menu-B2" role="tabpanel">
+                <!-- Menu B2 -->
+				<div class="row">
+				  	<div class="col-md-12 col-lg-6">
+						<h5>Environmental環境 Social社會 Governance公司治理, ESG</h5>	
+						  ESG 是指投資標的的選擇不只依據營收及績效數據，並增加對公司主動式前瞻性投資策略的解析。該公司對所處環境及社會需能適時做出應對，並具備風險管理的能力。將原有只注意該公司收益的方向,轉為對公司永續經營的評估.讓投資能會整體社會帶來福祉，<br><br>
+						  投資評估納入ESG 因子，將使基金經理人提供識別投資組合風險及機遇的工具及ESG資訊，改進加入財務影響的ESG投資流程及程序． 
+						
+						<h5>ESG 相關資訊</h5>
+						<ul>
+							<li>
+								<a href="https://www.samchoulove.com/what-is-the-esg-etf/">SAM 投資趨勢 2021/01/17</a> ESG永續ETF有哪些?ESG是股價上漲保證嗎?
+							</li>
+							<li>
+								<a href="https://www.setn.com/News.aspx?NewsID=804931">SETN 三立新聞網 2020/08/29</a> 00878掀熱潮　什麼是ESG？相關的ETF有哪些？
+							</li>
+							<li>
+								<a href="https://www.stockfeel.com.tw/00692-00850-00878/">Stockfeel 2021/01/11</a>  永續 ETF 比較：國泰 00878 、元大 00850 、富邦 00692
+							</li>
+							<li>
+								<a href="https://www.etf168.com.tw/Article/Article?articleID=787"> 理財夥伴 2019/10/16</a> 深入解析元大ESG永續ETF跟元大台灣50持股差異
+							</li>
+						</ul>
+				  	</div>
+				  	<div class="col-md-12 col-lg-6">
+						<h5>台灣 ESG 相關 ETF</h5>
+						ESG ETF
+						<ul>
+							<li>00878 國泰台灣ESG永續高股息 <br>
+							成分股以MSCI臺灣指數為基本選樣範圍，篩選MSCI ESG評級為BB(含)以上且MSCI ESG爭議分數達3分(含)以上之個股。
+							依調整後股息殖利率排序取前30檔，並以調整後股息殖利率作為權重分配之標準，以捕捉台灣兼具永續與高息兩大特徵之企業的績效表現。
+							</li>
+							<li>00692 富邦公司治理 <br>
+							臺灣公司治理100指數是由臺灣證交所編製之指數，該指數是以在臺灣證交所上市的普通股為採樣母體公司。
+							加上上市公司最近1年公司治理評鑑結果前20%作為成分股主要篩選條件，並納入流動性、財務指標等條件篩選100檔成分股。
+							</li>
+							<li>00850 元大台灣ESG永續 <br>
+							追蹤臺灣永續指數之績效表現，臺灣永續指數由臺灣證券交易所與英國富時指數編制公司合作編制，成分股是由上市股票中評選出致力於ESG發展。
+							以永續經營為目標、並符合篩選條件的上市股票，投資於臺灣永續指數成分股票不低於 80%。
+							</li>
+						</ul>
+						<h5>美股 ESG 相關 ETF</h5>
+						<ul>
+							<li> SUSA - iShares MSCI美國ESG精選ETF </li>
+							<li> ESGD - iShares ESG感知MSCI歐澳遠東ETF </li>
+							<li> NULG - Nuveen ESG大型成長股ETF </li>
+							<li> ESGV - Vanguard ESG美股ETF </li>
+						</ul>
+					
+				  	</div>					
+				  
+				</div>				  
+              </div>
+
+              <div class="tab-pane" id="Menu-B3" role="tabpanel">
+                <!-- Menu B3 -->
+				<h5>理財書籍</h5>	
+				  <div class="row">
+				  	<div class="col-md-12 col-lg-6">
+						網路書單
+						  <ul>
+							<li>
+								<a href="https://rich01.com/blog-page_30/">Mr.Market 市場先生</a>： 我的投資書單
+							</li>
+							<li>
+								<a href="https://rich01.com/22-2/">Mr.Market 市場先生 2017/10/01</a>： 網友推薦22本理財入門與價值投資書單
+							</li>	
+							<li>
+								<a href="https://www.stockfeel.com.tw/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1%E6%9B%B8%E6%8E%A8%E8%96%A6%EF%BC%9A%E5%BF%85%E8%AE%80%E7%B6%93%E5%85%B8%E6%8A%95%E8%B3%87%E6%9B%B8/">Stockfeel 2021/01/10</a>： 投資理財書推薦：9 本跨越時代的必讀經典投資書
+							</li>	
+							<li>
+								<a href="https://smarter01.com/2020/03/01/money-management-books/">人生研究所 2020/03/01</a>： 理財投資入門推薦書單，尤其這三本「投資觀念基礎」一定要看！
+							</li>					  
+						  </ul>		<br>			  
+					</div>
+				  	<div class="col-md-12 col-lg-6">
+ 						理財知識網站
+						  <ul>
+								<li>
+									<a href="https://yp-finance.com/">FINANCE </a> 被動投資 主動生活
+								</li>
+							  <li>
+								<a href="https://investoredu.twse.com.tw/Pages/TWSE.aspx#gsc.tab=0">台灣證劵交易所：</a> 投資人知識網
+							  </li>
+							  <li>
+								<a href="https://www.brain168.com/online-course/">G股網：</a>線上課程
+							  </li>
+							  <li>
+								<a href="https://rich01.com/blog-page/">Mr.Market市場先生：</a>理財入門課 – 超過100篇學投資文章整理分享
+							  </li>
+						  </ul>					  
+					</div>					  
+				  </div>
+				  
+					<section>
+						摘錄自：<a href="https://www.stockfeel.com.tw/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1%E6%9B%B8%E6%8E%A8%E8%96%A6%EF%BC%9A%E5%BF%85%E8%AE%80%E7%B6%93%E5%85%B8%E6%8A%95%E8%B3%87%E6%9B%B8/">Stockfeel 2021/01/10</a>： 投資理財書推薦：9 本跨越時代的必讀經典投資書 <br><br>
+						<div id='app1' class="row" v-for="posts in results">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4" v-for="post in posts">
+								<div class="card">
+									<div class="card-header">
+										<a v-bind:href="post.Link">
+											{{ post.TitleC }}
+										</a>
+									</div>
+									<div class="card-body">
+										<p class="card-text">
+										<img v-bind:src="post.Figure" class="img-fluid">											
+										<dl>
+											<dd>作者：{{post.Author}}</dd>
+											<dd>書名：{{post.Title}} </dd>
+											<dd>出版商：{{post.Publisher}}</dd>
+											<dd>年份：{{post.Year}}</dd>
+											<dd>價格：{{post.Price}} </dd>
+											<dd>
+												英文本下載：<a v-bind:href="post.Book">
+													{{ post.TitleE }}
+												</a>											
+											</dd>
+										</dl>
+
+										
+										{{post.Description}}
+
+
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>				  
+
+				 
+
+              </div>
+				
+              <div class="tab-pane" id="Menu-B4" role="tabpanel">
+                <!-- Menu B4 -->
+				<h5>股市名詞</h5>
+				  <p>
+					  股價指數與權重<br><br>
+					  <a href="https://zh.wikipedia.org/wiki/%E8%82%A1%E5%83%B9%E6%8C%87%E6%95%B8">Wikipedia 股價指數</a>: 包含多種股票，是反映市场上組成股票價值的一個數據。它通常被用於展現組成股票的共通特性，例如在同一個证券交易所交易，屬於同一個产业，或有相同的市值。許多指數是由報章或財經期刊編製作為投資組合（例如共同基金）績效評估的基準點。
+					  <br><br>
+					  股價指數編成方式有很多種。廣基指數（broad-base index）代表整個股票市場的績效，採用選樣的方式反映投資人對經濟現況的敏感度。最常被提及的廣基指數多以包含一個國家最大的的证券交易所裡最具規模的上市公司編製，例如美国道瓊工業指數（Dow Jones Industrial Average）及标准普尔500指数（S&amp;P 500 Index），倫敦金融時報指數（或倫敦金融時報100種股價指數，倫敦金融時報100指數，the British FTSE 100），法國證商公會指數（或法國證商公會40種股價指數，the French CAC 40），德國法蘭克福股價指數（the German DAX）及日經指數（或日經225指數，Nikkei 225）。		
+					  <br><br>
+					  權重：指數亦可依其計算方式分類。價格加權指數（Price-weighted index），例如道瓊工業指數及紐約證交所科技100指數（NYSE ARCA Tech 100 Index）僅以個別成份股的價格計算指數。因此，雖然可能價格變動對某高單價個股並不屬重大，但卻會顯著影響指數，此外這個指數未考慮整體公司的相對規模。正好相反的是，另一種市值加權（market-value weighted）或資本加權（capitalization-weighted）指數是以公司規模為基礎編製，例如标准普尔500指数、香港恒生指数（Hang Seng Index）及台灣的加權股價指數，因此大公司的小幅價格波動即會顯著影響指數。另外，市佔加權指數（market-share weighted index），其計算是依股數為基礎加權平均，而非市值。
+				  </p>
+				  <p>
+				  		股票淨值與市值<br>
+					  	<ul>
+				  			<li>
+								<a href="https://rich01.com/blog-post_8/">Mr.Market 市場先生 2015/05/08: </a>股票每股淨值是什麼？淨值既不能當作公司真實價值，更不能當作清算價值
+							</li>
+							<li>
+								<a href="https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6000872">財經好讀 2019/12/27: </a>ETF的淨值跟市價有何關聯？達人：「折價」時適合買進，「溢價」時適合賣出！
+							</li>
+				  		</ul>
+						
+					  
+				  </p>
+				<p>
+					每股盈餘 Earnings Per Share, EPS <br><br>
+					EPS又称每股收益或每股盈利，是指公开市场上，每股给投资者/股东带来的收益。它是公司的獲利指標，對於有公開市場股票交易的公司而言，每股盈餘和公司的股價都有一定的聯動性，因此這也是公司現有股東與潛在投資人衡量公司獲利的關鍵要素之一。這詞彙經常出現於財經刊物或報章的財經版。<br><br>
+					每股盈餘的計算非常簡單易懂，其最基本的公式為：<br>
+
+					每股盈餘=(稅後淨利-當年特別股股利)／加權平均流通在外的普通股股數
+					<br><br>
+					优先股相对於普通股具有优先分配权，因此计算每股盈余前，税后净利中需要扣除优先股的股利。若优先股为可累积优先股，则无论是否宣告发放股利，按照股息率计算的优先股股利都要从税后净利中扣除。
+				</p>
+				<p>
+					股市風險指標<br><br>
+					<ul>
+						<li>
+							標準差 (Standard Deviation): 標準差在統計學上經常使用， 是一種表示分散程度的統計觀念， 用於證券市場可將波動風險量化，以台灣五十(0050) 而言，近年的年化標準差大多落在 10%~15% 之間
+						</li>
+						<li>
+							夏普值 (Sharpe Ratio): <br>
+								夏普值 = (基金報酬率-無風險利率) / 標準差 <br>
+
+							簡單而言，旨在承擔每單位波動風險(以標準差衡量)之下， 能獲取多少超越無風險利率的額外報酬，夏普值越高越好
+						</li>
+						<li>
+							Beta 值: 評估基金相對於市場指數的敏感程度, 若 Beta = 1，則表示市場指數與該基金一同變動、漲跌幅度一致；
+
+							若 Beta 大於 1，當市場指數上漲時，該基金的漲幅會較大，指數跌時，基金跌幅也會較大； 同理，若基金的 Beta 小於1，該基金價格波動度比市場指數來得低
+						</li>
+					</ul>
+				</p>
+			  	<p>
+			  		年化報酬率, 殖利率
+					<ul>
+			  			<li>
+							<a href="https://rich01.com/return-of-investment/">Mr.Market 投資先生 2018/05/01:</a>什麼是投資報酬率》「年化報酬率」和「殖利率」有什麼不同？
+						 
+						</li>
+			  		</ul>
+			  
+			  	</p>
+				
+
+              </div>				
+				
+            </div>
+
+          </div>
+        </div>	
+	
+	
+	</article>
+
+    <!-- InstanceEndEditable -->
+    <footer id="main_footer">
+		<p id="p-footer">
+				&copy; TCW Smart Investment
+		</p>
+	</footer>
+	
+	<!-- Vue 的 CDN -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <!-- Bootstrap 4 JavaScript 的 CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <!-- Axios 的 CDN -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	
+	<script>
+		// Javascript to enable link to tab
+		var url = document.location.toString();
+		if (url.match('#')) {
+			$('.list-group a[href="#' + url.split('#')[1] + '"]').tab('show');
+		}
+
+		// Change hash for page-reload
+		$('.list-group a').on('shown.bs.tab', function (e) {
+			window.location.hash = e.target.hash;
+		})
+	</script>
+	
+    <!-- InstanceBeginEditable name="vue control program" -->
+		<script>
+			const posts = []
+
+			const SECTIONS_REF = "投資理財"
+
+
+			new Vue({
+				el: '#app1',
+				data: {
+					posts,
+					// results: [],
+					sections: SECTIONS_REF.split(', '),
+					section: '投資理財'
+				},
+				filter: {
+					formatted(value) {
+						return ' 以下是 ${value} 類別的貼文 '
+					}
+				},
+
+				computed: {
+					results() {
+						let posts = this.posts
+							.slice()
+							.filter(post => post.Category === this.section)
+						let i, j, chunkedArray = [], chunk = 20;
+						for (i = 0, j = 0; i < posts.length; i += chunk, j++) {
+							chunkedArray[j] = posts.slice(i, i + chunk);
+						}
+						return chunkedArray
+					}
+				},
+
+				mounted() {
+					axios.get('db/INV-3021-Reference.json').then((response) => {
+						this.posts = response.data;
+						this.getPostsByCategory(this.section)
+					}).catch(error => { console.log(error); });
+				},
+
+			});
+
+
+
+		</script>
+    <!-- InstanceEndEditable -->
+</body>
+
+<!-- InstanceEnd --></html>

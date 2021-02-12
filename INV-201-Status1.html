@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/SST-01-Template02.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CSS 的 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Fontawesom 的 CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- Google Icons CDN  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- My CSS file -->
+  <link rel="stylesheet" href="css/mycss.css">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>智慧理財 - 操作手冊</title>
+  <meta name="description" content="Smart Investment Website">
+  <!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+  <!-- Vue實例的掛載點 -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">
+		智慧理財
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-hand-holding-usd">投資標的</i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-100-ETFSummary.html">投資標的匯總</a>
+              <a class="dropdown-item" href="INV-101-MarketTrend.html">市場分析</a>
+              <a class="dropdown-item" href="INV-102-InvestmentIndex.html">投資指標</a>						
+              <a class="dropdown-item" href="INV-103-InvestmentSuggestion.html">投資建議</a>
+		
+            </div>
+          </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-money-check-alt"></i>投資監控
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-200-StatusSummary.html">投資管控匯總</a>
+              <a class="dropdown-item" href="INV-201-Status1.html">網路作業說明</a>
+              <a class="dropdown-item" href="INV-202-Status2.html">股市即時監控</a>
+            </div>
+          </li>			
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-money-bill-alt"></i>財經資訊
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-300-FinancialWebsite.html">理財資訊網</a>
+              <a class="dropdown-item" href="INV-301-FinancialNews.html">財經資訊</a>
+              <a class="dropdown-item" href="INV-302-FinancialTerms.html">理財知識</a>
+            </div>
+          </li>	
+
+        </ul>
+
+      </div>
+    </nav>
+
+
+    <!-- Jumbotron-->
+
+    <!-- InstanceBeginEditable name="jumbotron description " -->
+	<div class="jumbotron jumbotron-fluid jumbotron-bg2 d-flex align-items-end">
+        <div class="container">
+            <div class="bg-lighter p-1" style="width:300px">
+              <h4 class="text-white" >股市操作手冊</h4>
+              <p class="lead text-white">股市作業說明</p>
+            </div>
+		</div>
+    </div>
+    <!-- InstanceEndEditable --> 
+
+    <!-- InstanceBeginEditable name="main_editable" -->
+	<div class="row">
+	  <div class="col-md-2">
+		<div class="list-group" id="MenuList" role="tablist">
+		  <a href="#Menu-B1" class="list-group-item list-group-item-action active" data-toggle="list">網路投資管道</a>
+		  <a href="#Menu-B2" class="list-group-item list-group-item-action" data-toggle="list">元大金控</a>
+		  <a href="#Menu-B3" class="list-group-item list-group-item-action" data-toggle="list">其他2</a>
+		</div>
+		<br>
+	  </div>
+	  <div class="col-md-10">
+		<div class="tab-content">
+
+		  <div class="tab-pane active" id="Menu-B1" role="tabpanel">
+			<!-- Menu B1 -->
+			<h3>網路投資管道</h3>
+
+		  
+
+		  </div>
+
+		  <div class="tab-pane" id="Menu-B2" role="tabpanel">
+			<!-- Menu B2 -->
+			<h3>元大金控</h3>
+			  <div class="row">
+				  <div class="col-md-12 col-lg-6">
+					  <h5>元大證劵</h5>
+					  下單類別：
+					  <ul>
+					  	<li>AP下單</li>
+						<li>WEB下單</li>
+						<li>語音下單</li>
+						<li>API下單</li>
+					  </ul>
+					  下單作業手冊
+					  <img src="fig/INV-2012-YuantaOperation-01.png" class="img-fluid" style="width:1000px">
+					  說明:
+					  <ul>
+					  	<li>
+							盤別：
+							<ul>
+								<li>普通交易：AM9:00~PM1:30</li>
+								<li>盤後交易：PM2:00~PM2:30</li>
+								<li>盤後零股交易：PM1:40~PM2:30</li>
+							</ul>
+						</li>
+						<li>
+							交易類別：
+							<ul>
+								<li>現-現股：現股就是付出100%的本金。</li>
+								<li>資-融資：你判斷股票會上漲，你想買股票做多，但是資金不夠時，可以用融資買進股票。( 融資期限通常為半年，可向券商申請延長到1.5年 ). 大部分都是券商會幫你付6成，你只需要準備4成就好。</li>
+								<li>劵-融劵：你判斷股票會下跌，你想做空股票時，可以用融券，跟券商借股票來先賣掉股票。( 融券期限通常為半年，可向券商申請延長到1.5年 )．融券需要付9成的保證金，所以一張100元的股票你必須付9萬元。接下來，就等待股票下跌後買回一張股票還給券商，並給利息(大多券商年利息0.1~0.3% )就好。</li>
+								<li>借：</li>
+							</ul>
+						</li>
+						<li>
+						  	委託期限：
+							<ul>
+								<li>ROD, Rest of Day:當日有效 - 送出委託之後，投資人只要不刪單，直到當日收盤前，這筆委託單都是有效的。</li>
+								<li>IOC, Immediate or Cancel:立即成交否則取消 - 掛出當下允許部分成交，其餘未成交之委託立即刪單，殘餘委託不會留存於委託簿，讓投資人在想要的價位內成交，而剩下的不留存，有需要再重下。</li>
+								<li>FOK, Fill or Kill:全部成交否則取消 - 指全數成交或取消，委託不會留存於委託簿，如果不想部分成交，可用這種方式委託。</li>
+							</ul>
+						</li>
+						<li>
+							限價模式：
+							<ul>
+								<li>漲-漲停：漲停價是平盤價+10%</li>
+								<li>平-平盤：今天它的平盤價，就是昨天的收盤價。</li>
+								<li>跌-跌停：跌停價是平盤價-10%</li>
+								<li>市-市價：</li>
+							</ul>
+						</li>
+					  </ul>
+					  
+					  <h5>相關資訊</h5>
+					  <ul>
+					  	<li>
+							<a href="https://rich01.com/what-rod-ioc-fok/">市場先生 2020/05/07: </a>
+							逐筆交易意思與優缺點？市價單、限價單、ROD、IOC、FOK介紹
+						</li>
+					  </ul>
+				  
+				  </div>
+				  <div class="col-md-12 col-lg-6">
+					  <h5>元大投信</h5>
+				  
+				  </div>					
+			  </div>
+		  </div>
+
+		  <div class="tab-pane" id="Menu-B3" role="tabpanel">
+			<!-- Menu B3 -->
+			<h5>其他2</h5>			<!-- Menu B3 -->
+
+		  </div>
+		</div>
+
+	  </div>
+	</div>		
+
+    <!-- InstanceEndEditable -->
+    <footer id="main_footer">
+		<p id="p-footer">
+				&copy; TCW Smart Investment
+		</p>
+	</footer>
+	
+	<!-- Vue 的 CDN -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <!-- Bootstrap 4 JavaScript 的 CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <!-- Axios 的 CDN -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	
+	<script>
+		// Javascript to enable link to tab
+		var url = document.location.toString();
+		if (url.match('#')) {
+			$('.list-group a[href="#' + url.split('#')[1] + '"]').tab('show');
+		}
+
+		// Change hash for page-reload
+		$('.list-group a').on('shown.bs.tab', function (e) {
+			window.location.hash = e.target.hash;
+		})
+	</script>
+	
+    <!-- InstanceBeginEditable name="vue control program" -->
+    <div>
+      <!-- Vue實例的程式碼 -->
+    </div>
+    <!-- InstanceEndEditable -->
+</body>
+
+<!-- InstanceEnd --></html>

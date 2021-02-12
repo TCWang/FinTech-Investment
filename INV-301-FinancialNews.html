@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/SST-01-Template02.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CSS 的 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Fontawesom 的 CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- Google Icons CDN  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- My CSS file -->
+  <link rel="stylesheet" href="css/mycss.css">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>智慧理財 - 財經新聞</title>
+  <meta name="description" content="Smart Investment Website">
+  <!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+  <!-- Vue實例的掛載點 -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">
+		智慧理財
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-hand-holding-usd">投資標的</i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-100-ETFSummary.html">投資標的匯總</a>
+              <a class="dropdown-item" href="INV-101-MarketTrend.html">市場分析</a>
+              <a class="dropdown-item" href="INV-102-InvestmentIndex.html">投資指標</a>						
+              <a class="dropdown-item" href="INV-103-InvestmentSuggestion.html">投資建議</a>
+		
+            </div>
+          </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-money-check-alt"></i>投資監控
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-200-StatusSummary.html">投資管控匯總</a>
+              <a class="dropdown-item" href="INV-201-Status1.html">網路作業說明</a>
+              <a class="dropdown-item" href="INV-202-Status2.html">股市即時監控</a>
+            </div>
+          </li>			
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-money-bill-alt"></i>財經資訊
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="INV-300-FinancialWebsite.html">理財資訊網</a>
+              <a class="dropdown-item" href="INV-301-FinancialNews.html">財經資訊</a>
+              <a class="dropdown-item" href="INV-302-FinancialTerms.html">理財知識</a>
+            </div>
+          </li>	
+
+        </ul>
+
+      </div>
+    </nav>
+
+
+    <!-- Jumbotron-->
+
+    <!-- InstanceBeginEditable name="jumbotron description " -->
+	<div class="jumbotron jumbotron-fluid jumbotron-bg3 d-flex align-items-end">
+        <div class="container">
+            <div class="bg-lighter p-1" style="width:300px">
+              <h4 class="text-white" >財經新聞</h4>
+              <p class="lead text-white">股市投資最新資訊</p>
+            </div>
+		</div>
+    </div>
+    <!-- InstanceEndEditable --> 
+
+    <!-- InstanceBeginEditable name="main_editable" -->
+	<div class="row">
+	  <div class="col-md-2">
+		<div class="list-group" id="MenuList" role="tablist">
+		  <a href="#Menu-B1" class="list-group-item list-group-item-action active" data-toggle="list">財經新聞剪報</a>
+		  <a href="#Menu-B2" class="list-group-item list-group-item-action" data-toggle="list">高股息資訊</a>
+		  <a href="#Menu-B3" class="list-group-item list-group-item-action" data-toggle="list">美加投資信息</a>			
+
+		</div>
+		<br>
+	  </div>
+	  <div class="col-md-10">
+		<div class="tab-content">
+
+		  <div class="tab-pane active" id="Menu-B1" role="tabpanel">
+			<!-- Menu B1 -->
+			  <div class="row">
+			  	<div class="col-md-12 col-lg-6">
+					<h5>理財投資建議類</h5>
+					<ul>
+						<li>
+							<a href="https://money.udn.com/money/story/5618/5170869?utm_source=moneylinemobile&utm_medium=share">經濟日報 2021/01/13</a>: 挑戰最高配息率！中信高股息ETF殖利率8% <br>
+							<ul>
+								<li>中信投信 00882 - 中信中國高股息</li>
+								<li>中信投信 00883B - 中信ESG投資級債</li>
+								<li>中信投信 00884B - 中信低碳新興債</li>
+							</ul>
+						</li>  
+						<li>
+							<a href="https://orange.udn.com/orange/story/121198/5212814?utm_source=udnnews&utm_medium=linepush">ETF2021漲幅前10名</a>
+							<ul>
+								<li>00753L	中信中國50正2	28.58%</li>
+								<li>00665L	富邦恒生國企正2	19.04%</li>
+								<li>00650L	FH香港正2	16.36%</li>
+								<li>00631L	元大台灣50正2	16.11%</li>
+								<li>00881	國泰台灣5G+	15.48%</li>
+								<li>0052	富邦科技	15.29%</li>
+								<li>00752	中信中國50	14.77%</li>
+								<li>00685L	群益臺灣加權正2	14.57%</li>
+								<li>00663L	國泰臺灣加權正2	14.41%</li>
+								<li>00715L	街口S&amp;P布蘭特油正2	14.22%</li>						
+							</ul>
+
+						</li>
+						<li>
+							<a href="https://money.udn.com/money/story/5618/5156160">經濟日報 2021/01/07</a> 台新ESG新興市場債券基金客說會
+						</li>
+					</ul>
+
+				
+				  
+				</div>
+			  	<div class="col-md-12 col-lg-6">
+					<h5>投資經驗分享類</h5>
+					<ul>
+						<li> 
+							<a href="https://ctee.com.tw/insights/407829.html">
+								工商時報 2021/01/25
+							</a>: 6支股票慘賠散戶求救 專家曝2大錯誤 <br>
+							一、買進之後就丟著不管；二、抱持長期投資的心態。
+						</li>	
+					</ul>				  
+
+					<h5>國稅相關資訊類</h5>
+					<ul>
+						<li> 
+							<a href="https://money.udn.com/money/story/6710/5110729?utm_source=moneylinemobile&utm_medium=share">
+								經濟日報 2020/12/22
+							</a>: 保單免繳遺產稅 有撇步 <br>
+							父母在規劃保單的過程中，不僅本身要作為要保人，被保險人也必須是自己，未來指定受益人 - 子女領取到身故給付時，才不會被課到遺產稅。
+						</li>	
+					</ul>	
+	
+				  
+				</div>				  
+			  </div>
+			  
+			  
+
+		  </div>
+
+		  <div class="tab-pane" id="Menu-B2" role="tabpanel">
+			<!-- Menu B2 -->
+
+			  <div class="row">
+			  	<div class="col-md-12 col-lg-6">
+				<h5>高股息資訊</h5>
+					<h5>高配息股市新聞</h5>
+					高配息 基金/ETF
+					<ul>
+						<li>
+							<a href="https://udn.com/news/story/7251/5128483">聯合新聞網 2020/12/28: </a>五檔台股高配息基金 一張圖掌握. <br>
+							<img src="fig/INV-3014-News-高配息股.png" class="img-fluid" style="width:800px">
+						</li>
+						<li>
+							<a href="https://smart.businessweekly.com.tw/Reading/IndepArticle.aspx?id=6003106">財經好讀 2020/12/03: </a>6檔高股息ETF配息全數出爐！「這檔ETF」殖利率竟將近8%. <br>
+							<img src="fig/INV-3014-News-高配息ETFSummary.jpg" class="img-fluid" style="width:800px">
+						</li>						
+						<li>
+							<a href="https://udn.com/news/story/7251/5141280">聯合新聞網 2021/01/02: </a>2021高股息ETF這樣挑 更聰明 <br>
+							<img src="fig/INV-3014-News-高配息ETFSummary2.png" class="img-fluid" style="width:800px">
+						</li>					
+					</ul>
+					高配息 股票
+					<ul>
+						
+						<li>
+							 <a href="https://www.businesstoday.com.tw/article/category/183008/post/202011170026/2021%E5%B9%B4%E6%9C%80%E6%96%B0%EF%BC%8117%E6%AA%94%E9%AB%98%E9%85%8D%E6%81%AF%E8%82%A1%E6%9B%9D%E5%85%89%EF%BC%9A%E9%80%994%E6%AA%94%E6%BD%9B%E5%9C%A8%E6%AE%96%E5%88%A9%E7%8E%87%E7%A0%B410%EF%BC%85%EF%BC%8C%E8%BF%913%E5%B9%B4%E5%B9%B3%E5%9D%87%E9%85%8D%E6%81%AF%E7%8E%87%EF%BC%9E60%EF%BC%85">今周刊 2020/11/17:</a> 2021年最新！17檔高配息股曝光：這4檔潛在殖利率破10％，近3年平均配息率＞60％. <br>
+							<img src="fig/INV-3014-News-殖利率.png" class="img-fluid" style="width:800px">
+						</li>
+
+						<li>
+							<a href="https://money.udn.com/money/story/12040/4481230">經濟日報 2020/04/10: </a>2020年最新配息出爐！12檔個股高殖利率、優於五年平均搶先看。<br>
+							<img src="fig/INV-3014-News-高配息股經濟日報.jpg" class="img-fluid" style="width:800px"><br><br>
+							<img src="fig/INV-3014-News-高配息股經濟日報2.jpg" class="img-fluid" style="width:400px">							
+						</li>
+
+						<li>
+							<a href="https://stock.wespai.com/p/2596">高配息績優股</a>
+						</li>
+						
+					</ul>				
+				  
+				</div>
+			  	<div class="col-md-12 col-lg-6">
+					<h5>金融股配息比較</h5>
+					<ul>
+						<li>
+							<a href="https://topics.cnyes.com/YUANTAHD/">鉅亨：</a>台股現金殖利率傲視全球 <br>
+							<img src="fig/INV-3014-News-全球利率-01.png" class="img-fluid" style="width:800px">	
+							<img src="fig/INV-3014-News-全球利率-02.png" class="img-fluid" style="width:800px">	
+						</li>						
+						<li>
+							<a href="https://goodideamin.com.tw/blog/post/118359192">MIN理財生活札記： </a>110年各家金融股「預估殖利率」一覽表(含預估109整年EPS、預估盈餘分配率、預估現金及股票股利配發狀況)
+							<img src="fig/INV-3014-News-高配息MIN.jpg" class="img-fluid" style="width:800px">		<br><br>
+							
+						</li>
+						<li>
+							<a href="https://www.businesstoday.com.tw/article/category/80402/post/202004290019/%E5%AD%98%E8%82%A1%E6%97%8F%E7%9C%8B%E9%81%8E%E4%BE%86%EF%BC%81%E4%B8%80%E5%BC%B5%E8%A1%A8%E7%9C%8B%EF%BC%9A25%E6%AA%94%E9%87%91%E8%9E%8D%E8%82%A12020%E5%B9%B4%E3%80%8C%E9%A0%90%E4%BC%B0%E9%85%8D%E8%82%A1%E9%85%8D%E6%81%AF%E3%80%8D%E6%AE%96%E5%88%A9%E7%8E%87">今周刊 2020/04/29： </a>一張表看：25檔金融股2020年「預估配股配息」殖利率
+							<img src="fig/INV-3014-News-高配息今周刊.png" class="img-fluid" style="width:800px">	<br><br>	
+							<img src="fig/INV-3014-News-高配息今周刊2.png" class="img-fluid" style="width:800px">	<br><br>
+							<img src="fig/INV-3014-News-高配息今周刊3.png" class="img-fluid" style="width:800px">	<br><br>							
+						</li>						
+					</ul>
+
+				  
+				</div>				  
+			  </div>
+		  </div>
+
+			
+		  <div class="tab-pane" id="Menu-B3" role="tabpanel">
+			<!-- Menu B3 -->
+
+			  <div class="row">
+				  <div class="col-md-12 col-lg-6">
+					<h5>加拿大/美國股票資訊</h5>
+						<ul>
+							<li>Youtube 
+								<a href="https://www.youtube.com/watch?v=PNXdtrAUufc">Royal Finance 2020/12/11:</a>我最喜欢的3个加拿大分红股票公司 Best Dividend Stocks to Buy &amp; Hold Forever Dividend Stock Investing
+								<ul>
+									<li>
+										GWO.TO Great West Lifeco Inc. 保險控股公司: Dividend: 5.95% PE   16
+									</li>
+									<li>
+										Bell Canada BCE.TO 網路通信公司: Dividend 5.76%, Beta: 0.32
+									</li>
+									<li>
+										Royal Bank of Canada, RBC 加拿大最大銀行：Dividend 4.08, Beta: 
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=F0G6x97K1zU">Youtube Tingting 2020/08/19: </a>加拿大最好的核心指数股票基金ETF | BEST CORE ETFs To Buy &amp; Hold FOREVER 2020
+							</li>
+							<li>
+								Youtube <a href="https://www.youtube.com/watch?v=6pzyCJIGIgc&t=860s">北美劉忙 2020/10/13: </a>加拿大最好的ETF更新，什么是货币对冲？如何应对未来美元贬值的可能性？
+							</li>
+							<li>
+								Youtube <a href="">北美劉忙 2021/01/31: </a>2021年最好的加拿大ETF， 这三只我定投！
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=M50EO9EfVBc">钱来拜访2020/11/08: </a>打造被动收入｜年赚40%的科技股ETF要买吗？
+							</li>							
+							<li>
+							Youtube <a href="https://www.youtube.com/watch?v=k4gcLXqh5UE"> 美股散戶 2020/10/05: </a>2020年最值得買的TOP 3 ETFs （高成長性）
+								<ul>
+									<li>
+										Vanguard S&amp;P 500 ETF, VOO, 投資報酬率 Average annual returns 2020/06/30 7.45%
+									</li>
+									<li>
+										Vanguard S&amp;P 500 Growth ETF, VOOG, 選擇成長潛力股  
+									</li>
+									<li>
+										Vanguard Real Estate ETF, VNQ - MSCI 指標
+									</li>
+								</ul>
+							</li>
+
+						</ul>						  
+
+				  
+				  </div>
+				  <div class="col-md-12 col-lg-6">
+				  
+				  </div>				  
+				  
+		  
+			  </div>
+		  </div>			
+			
+     <!-- 插入下一節 -->			
+
+		</div>
+
+	  </div>
+	</div>		
+	
+
+    <!-- InstanceEndEditable -->
+    <footer id="main_footer">
+		<p id="p-footer">
+				&copy; TCW Smart Investment
+		</p>
+	</footer>
+	
+	<!-- Vue 的 CDN -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <!-- Bootstrap 4 JavaScript 的 CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <!-- Axios 的 CDN -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	
+	<script>
+		// Javascript to enable link to tab
+		var url = document.location.toString();
+		if (url.match('#')) {
+			$('.list-group a[href="#' + url.split('#')[1] + '"]').tab('show');
+		}
+
+		// Change hash for page-reload
+		$('.list-group a').on('shown.bs.tab', function (e) {
+			window.location.hash = e.target.hash;
+		})
+	</script>
+	
+    <!-- InstanceBeginEditable name="vue control program" -->
+    <div>
+      <!-- Vue實例的程式碼 -->
+    </div>
+    <!-- InstanceEndEditable -->
+</body>
+
+<!-- InstanceEnd --></html>
