@@ -91,23 +91,24 @@
         <div class="container">
             <div class="bg-lighter p-1" style="width:300px">
               <h4 class="text-white" >投資建議</h4>
-              <p class="lead text-white">如何選擇投資標的</p>
+              <p class="lead text-white">2021年 基金界的護國神山群</p>
             </div>
 		</div>
     </div>
     <!-- InstanceEndEditable --> 
 
     <!-- InstanceBeginEditable name="main_editable" -->
-    <article>
+	<article>
       <div class="container-fluid">
         <div class="row ">
-          <h3>投資建議</h3>
+          <h3>2021 投資建議首選基金項目</h3>
         </div>
         <div class="row">
           <div class="col-md-2">
             <div class="list-group" id="MenuList" role="tablist">
-              <a href="#Menu-B1" class="list-group-item list-group-item-action active" data-toggle="list">投資建議</a>
-              <a href="#Menu-B2" class="list-group-item list-group-item-action" data-toggle="list">標的匯總</a>
+              <a href="#Menu-B1" class="list-group-item list-group-item-action active" data-toggle="list">2021年度首選基金</a>
+              <a href="#Menu-B2" class="list-group-item list-group-item-action" data-toggle="list">2021項目說明</a>
+              <a href="#Menu-B3" class="list-group-item list-group-item-action" data-toggle="list">2021項目趨勢圖</a>
             </div>
             <br>
           </div>
@@ -118,8 +119,44 @@
               <div class="tab-pane active" id="Menu-B1" role="tabpanel">
                 <!-- Menu B1 -->
                 <div id="app1" class="row mb-1">
-                  <h3 id="title-2">投資建議 </h3>
 
+				<h5>2021年度首選基金</h5><br>
+	
+				 <a href="https://money.udn.com/money/story/121853/5246167?utm_source=moneylinemobile&utm_medium=share"> 摘錄自：   經濟日報 2021/02/12: </a>達人談投資 - 這21檔誰最牛？快來找基金界的護國神山群
+		
+					
+				<div class="row" v-for="posts in results">	
+                 <table class="table table-striped table-sm table-hover" style="width:100%">
+                    <thead style="background-color:lightblue">
+                      <tr class="text-left">
+                        <th>基金</th>
+                        <th>日期</th>
+						<th>淨值</th>
+						<th>管理費</th>
+						<th>報酬-1月</th>
+                        <th>報酬-1年</th>
+						<th>風險</th>					  
+						<th>規模</th>
+						<th>排名</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="post in posts">
+                        <td>
+						  <a v-bind:href=" post.Link ">{{ post.基金名稱 }} </a>						  
+						</td>
+                        <td>{{ post.成立日期 }}</td>
+						<td>{{ post.單位淨值}} </td>
+						<td>{{ post.管理費}} </td>
+						<td>{{ post.報酬率1月}} </td>
+                        <td>{{ post.報酬率1年 }}</td>
+						<td>{{ post.風險評等}} </td>	
+						<td>{{ post.基金規模}} </td>
+						<td>{{ post.排名}} </td>
+                      </tr>
+                    </tbody>
+                  </table>
+				</div>
 
                 </div>
               </div>
@@ -128,29 +165,198 @@
                 <!-- Menu B2 -->
                 <div id="app2" class="container-fluid">
                   <div class="row">
-                    <h3 id="title-2">標的匯總</h3>
+                    <h3 id="title-2">2021 首選基金說明</h3>
                   </div>
                   <div class="row">
-                    <div class="col-6">
-    
+                    <div class="col-10">
+                      <div class="form-group">
+                        <select class="form-control" v-model='section' id="exampleFormControlSelect1">
+                          <option v-for="section in sections">{{ section }}</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="col-6">
-
+                    <div class="col-2">
+                      <h3 id="title-2" class='text-left'> 項目 </h3>
                     </div>
                     <br><br>
+                  </div>
+
+                  <div  v-for="posts in results">
+                    <div v-for="post in posts">
+                      <div class="row" >
+                        投資項目說明
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <table class="table table-striped table-sm table-responsive" style="width:100%">
+
+                            <tr>
+                              <td>基金名稱:</td>
+                              <td><a v-bind:href="post.Link"> {{post.基金名稱}}</a></td>
+                            </tr>
+                            <tr>
+                              <td>投資類別:</td>
+                              <td>{{post.類別}}</td>
+                            </tr>							  
+                            <tr>
+                              <td>基金代號:</td>
+                              <td>{{post.代號}}</td>
+                            </tr>
+                            <tr>
+                              <td>計價幣別:</td>
+                              <td>{{post.計價幣別}}</td>
+                            </tr>
+                            <tr>
+                              <td>單位淨值:</td>
+                              <td>{{post.單位淨值}}</td>
+                            </tr>
+							<tr>
+								<td>基金規模:</td>  
+								<td>{{post.基金規模}} </td>
+							</tr>
+							<tr>
+								<td>管理費:</td>  
+								<td>{{post.管理費}} </td>
+							</tr>
+						  
+							<tr>
+								<td>排名:</td>  
+								<td>{{post.排名}} </td>
+							</tr>
+
+							<tr>
+								<td>基金績效： 1個月</td>  
+								<td>{{ post.Month1}} % </td>
+							</tr>								  
+							<tr>
+								<td>基金績效： 3個月</td>  
+								<td>{{ post.Month3}} % </td>
+							</tr>	
+							<tr>
+								<td>基金績效： 6個月</td>  
+								<td>{{ post.Month6}} % </td>
+							</tr>
+							<tr>
+								<td>基金績效： 今年</td>  
+								<td>{{ post.今年以來}} % </td>
+							</tr>							  
+							<tr>
+								<td>基金績效： 1年</td>  
+								<td>{{ post.Year1}} % </td>
+							</tr>								  
+                          </table>
+                        </div>
+                        <div class="col-md-6">
+                          <table class="table table-striped table-sm table-responsive" style="width:100%">
+						  
+                            <tr>
+                              <td>管理公司:</td>
+                              <td>{{post.基金管理公司}}</td>
+                            </tr>
+                            <tr>
+                              <td>投資地區:</td>
+                              <td>{{post.投資地區}}</td>
+                            </tr>
+                            <tr>
+                              <td>成立日期:</td>
+                              <td>{{post.成立日期}}</td>
+                            </tr>
+							<tr>
+								<td>基金組別:</td> 
+								<td>{{post.基金組別}} </td>
+							</tr>
+                            <tr>
+                              <td>風險評等:</td>
+                              <td>{{post.風險評等}}</td>
+                            </tr>	
+                            <tr>
+                              <td>晨星評等:</td>
+                              <td>{{post.晨星評等}}</td>
+                            </tr>
+							  
+ 							<tr>
+								<td>風險： Sharpe</td>  
+								<td>{{ post.Sharpe}}% </td>
+							</tr>     
+ 							<tr>
+								<td>風險： Beta</td>  
+								<td>{{ post.Beta}}% </td>
+							</tr>
+ 							<tr>
+								<td>風險： 年化標準差</td>  
+								<td>{{ post.年化標準差}}% </td>
+							</tr>	
+ 							<tr>
+								<td>基金排名</td>  
+								<td>{{ post.排名}}% </td>
+							</tr>								  
+                          </table>
+                        </div>
+                      </div>
+					  <div class="row"j>
+						<p>投資策略: <br>
+						  {{post.投資策略}} <br><br>
+						  <img v-bind:src="post.Figure1" class="img-fluid" style="width:600px">
+						  <img v-bind:src="post.Figure2" class="img-fluid" style="width:600px">							
+							
+						</p>
+
+					  </div>
+
+                    </div>
                   </div>
 
                 </div>
 
               </div>
 
-        
+              <div class="tab-pane" id="Menu-B3" role="tabpanel">
+                <!-- Menu B3 -->
+                <h3> 2021首選基金股市趨勢 </h3>
+  
+				  <div id="app3" class="container-fluid">
+					<div class="row">
+
+					  <div class="container-fluid" id="app">
+
+						<div class="row" v-for="posts in results">
+						  <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" v-for="post in posts">
+							<div class="card">
+							  <div class="card-header">
+								<a v-bind:href="post.Link">
+								  {{post.基金名稱}}
+								</a>	
+							  </div>
+							  <div class="card-body text-left">
+								<dl>
+									<dd>
+									排名： {{post.排名}}
+									</dd>									
+									<dd>
+										  <img v-bind:src="post.Figure1" class="img-fluid" style="width:800px">
+										  <img v-bind:src="post.Figure2" class="img-fluid" style="width:800px">
+									</dd>
+
+								</dl>
+							  </div>
+
+							</div>
+						  </div>
+						</div>
+					  </div>
+
+					</div>
+				  </div> 
+				  
+
+              </div>
             </div>
 
           </div>
         </div>
-      </div>
-    </article>
+      </div>	
+	
+	</article>
 
     <!-- InstanceEndEditable -->
     <footer id="main_footer">
@@ -189,9 +395,120 @@
 	</script>
 	
     <!-- InstanceBeginEditable name="vue control program" -->
-    <div>
-      <!-- Vue實例的程式碼 -->
-    </div>
+   <script>
+      const posts = []
+      const SECTIONS_01 = "投資2021"
+      const SECTIONS_02 = "國泰台灣5G PLUS ETF, 元大全球未來關鍵科技ETF, 元大全球未來通訊ETF基金, 統一全球智聯網AIoT基金, 復華全球物聯網科技基金-美元, 富蘭克林華美 AI 新科技基金新臺幣N, 合庫AI電動車及車聯網創新基金, 第一金全球AI機器人及自動化產業基金-新臺幣, 第一金全球AI精準醫療基金, 日盛全球智能車基金, 兆豐國際台灣先進通訊基金, 路博邁5G股票基金N累積(美元), 第一金全球AI人工智慧基金, 凱基雲端趨勢基金, 新光全球AI新創產業基金, 華南永昌全球物聯網精選基金, 中國信託智慧城市建設基金, 台新SG全球AI機器人精選ETF, 台新智慧生活基金, 復華中國5G通信ETF, 第一金全球AI FinTech金融科技 "
+      const SECTIONS_03 = "投資2021"	  
+
+      new Vue({
+        el: '#app1',
+        data: {
+          posts,
+          // results: [],
+          sections: SECTIONS_01.split(', '),
+          section: '投資2021'
+        },
+        filter: {
+          formatted(value) {
+            return ' 以下是 ${value} 類別的貼文 '
+          }
+        },
+
+        computed: {
+          results() {
+            let posts = this.posts
+              .slice()
+              .filter(post => post.Category === this.section)
+            let i, j, chunkedArray = [], chunk = 50;
+            for (i = 0, j = 0; i < posts.length; i += chunk, j++) {
+              chunkedArray[j] = posts.slice(i, i + chunk);
+            }
+            return chunkedArray
+          }
+        },
+
+        mounted() {
+          axios.get('db/INV-1031-ETF2021Target.json').then((response) => {
+            this.posts = response.data;
+            this.getPostsByCategory(this.section)
+          }).catch(error => { console.log(error); });
+        }
+      });
+
+
+      new Vue({
+        el: '#app2',
+        data: {
+          posts,
+          // results: [],
+          sections: SECTIONS_02.split(', '),
+          section: '國泰台灣5G PLUS ETF'
+        },
+        filter: {
+          formatted(value) {
+            return ' 以下是 ${value} 類別的貼文 '
+          }
+        },
+
+        computed: {
+          results() {
+            let posts = this.posts
+              .slice()
+              .filter(post => post.基金名稱 === this.section)
+            let i, j, chunkedArray = [], chunk = 50;
+            for (i = 0, j = 0; i < posts.length; i += chunk, j++) {
+              chunkedArray[j] = posts.slice(i, i + chunk);
+            }
+            return chunkedArray
+          }
+        },
+
+        mounted() {
+          axios.get('db/INV-1031-ETF2021Target.json').then((response) => {
+            this.posts = response.data;
+            this.getPostsByCategory(this.section)
+          }).catch(error => { console.log(error); });
+        }
+      });
+
+      new Vue({
+        el: '#app3',
+        data: {
+          posts,
+          // results: [],
+          sections: SECTIONS_03.split(', '),
+          section: '投資2021'
+        },
+        filter: {
+          formatted(value) {
+            return ' 以下是 ${value} 類別的貼文 '
+          }
+        },
+
+        computed: {
+          results() {
+            let posts = this.posts
+              .slice()
+              .filter(post => post.Category === this.section)
+            let i, j, chunkedArray = [], chunk = 40;
+            for (i = 0, j = 0; i < posts.length; i += chunk, j++) {
+              chunkedArray[j] = posts.slice(i, i + chunk);
+            }
+            return chunkedArray
+          }
+        },
+
+        mounted() {
+          axios.get('db/INV-1031-ETF2021Target.json').then((response) => {
+            this.posts = response.data;
+            this.getPostsByCategory(this.section)
+          }).catch(error => { console.log(error); });
+        },
+
+      });
+
+    </script>
     <!-- InstanceEndEditable -->
 </body>
 
