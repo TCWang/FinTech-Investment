@@ -133,10 +133,17 @@
             "Category": "財經雜誌"
         },
         {
-            "No": "303",
+            "No": "304",
             "Title": "中華民國退休基金協會",
             "Figure": "fig/INV-3013-Magazine-退休基金.png",
             "Link": "https://www.pension.org.tw/index.php/2018-10-03-15-11-09/2019-02-13-00-01-00",
+            "Category": "財經雜誌"
+        },
+        {
+            "No": "305",
+            "Title": "錢管家- Money錢",
+            "Figure": "fig/INV-3013-Magazine-Money錢.png",
+            "Link": "https://www.moneynet.com.tw/",
             "Category": "財經雜誌"
         }
     ]
