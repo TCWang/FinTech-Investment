@@ -145,5 +145,19 @@
             "Figure": "fig/INV-3013-Magazine-Money錢.png",
             "Link": "https://www.moneynet.com.tw/",
             "Category": "財經雜誌"
+        },
+        {
+            "No": "306",
+            "Title": "先探i投資",
+            "Figure": "fig/INV-3013-Magazine-先探.jpeg",
+            "Link": "http://weekly.invest.com.tw/",
+            "Category": "財經雜誌"
+        },
+        {
+            "No": "307",
+            "Title": "財訊雜誌",
+            "Figure": "fig/INV-3013-Magazine-財訊.jpeg",
+            "Link": "https://www.wealth.com.tw/",
+            "Category": "財經雜誌"
         }
     ]
